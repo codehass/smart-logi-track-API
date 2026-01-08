@@ -14,3 +14,5 @@ requests
 pyspark
 matplotlib
 seaborn
+numpy 
+pandas
