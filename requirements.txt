@@ -12,3 +12,5 @@ PyJWT
 uvicorn
 requests
 pyspark
+matplotlib
+seaborn
