@@ -13,8 +13,6 @@ def load_and_save_bronze(input_path, output_path):
         "source_file", input_file_name()
     )
 
-    # Use coalesce(1) to merge all data into one partition
-    # Note: I changed format back to "parquet" based on your request
     df_bronze.coalesce(1).write.mode("overwrite").format("parquet").save(output_path)
 
     return df_bronze
