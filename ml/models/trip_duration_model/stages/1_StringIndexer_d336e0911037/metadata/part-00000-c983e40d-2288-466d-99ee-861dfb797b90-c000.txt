@@ -1,0 +1,1 @@
+{"class":"org.apache.spark.ml.feature.StringIndexerModel","timestamp":1767955705246,"sparkVersion":"4.1.0","uid":"StringIndexer_d336e0911037","paramMap":{"handleInvalid":"keep","inputCol":"pickuphour","outputCol":"pickuphour_idx"},"defaultParamMap":{"handleInvalid":"error","outputCol":"StringIndexer_d336e0911037__output","stringOrderType":"frequencyDesc"}}
