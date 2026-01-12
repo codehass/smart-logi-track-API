@@ -10,7 +10,7 @@ model_path = os.path.abspath(
 
 
 class TripPredictor:
-    def __init__(self, model_path):
+    def __init__(self):
         self.spark = SparkSession.builder.appName("TripBackend").getOrCreate()
         self.model = PipelineModel.load(model_path)
 
