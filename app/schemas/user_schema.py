@@ -26,3 +26,15 @@ class TokenSchema(BaseModel):
 
 class TokenData(BaseModel):
     username: str
+
+
+class TrajectFeaturesRequest(BaseModel):
+    trip_distance: float
+    fare_amount: float
+    tip_amount: float
+    tolls_amount: float
+    total_amount: float
+    Airport_fee: float
+    RatecodeID: int
+    pickuphour: int
+    dayof_week: int
