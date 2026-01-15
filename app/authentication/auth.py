@@ -1,7 +1,7 @@
 import os, jwt
 from dotenv import load_dotenv
 from fastapi import Depends, HTTPException, status
-from fastapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm
+from fastapi.security import OAuth2PasswordBearer
 from passlib.context import CryptContext
 from ..models.user_model import User
 from ..schemas.user_schema import TokenData

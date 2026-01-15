@@ -20,15 +20,15 @@ class TripPredictor:
         return predictions.select("prediction").first()["prediction"]
 
 
-# predictor = TripPredictor(model_path)
+# predictor = TripPredictor()
 
 # result = predictor.predict(
 #     {
 #         "trip_distance": 1.6,
-#         "fare_amount": 10.0,
+#         "fare_amount": 12.0,
 #         "tip_amount": 3.0,
 #         "tolls_amount": 0.0,
-#         "total_amount": 18.0,
+#         "total_amount": 48.0,
 #         "Airport_fee": 0.0,
 #         "RatecodeID": 1,
 #         "pickuphour": 0,

@@ -1,4 +1,3 @@
-import os
 from fastapi import Depends, HTTPException, status, Request
 from sqlalchemy.orm import Session
 from ...authentication.auth import (
