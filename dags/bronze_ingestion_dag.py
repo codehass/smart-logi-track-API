@@ -23,4 +23,4 @@ with DAG(
         ),
     )
 
-    ingest_bronze
+    # ingest_bronze

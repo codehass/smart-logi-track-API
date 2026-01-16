@@ -1,6 +1,7 @@
 from airflow import DAG
 from airflow.operators.bash import BashOperator
 from datetime import datetime
+from airflow.sensors.external_task import ExternalTaskSensor
 
 BRONZE_PATH = "/opt/airflow/data/bronze/taxi_bronze.parquet"
 SPARK_JOB = "/opt/airflow/spark_jobs/silver_processing.py"
@@ -15,6 +16,14 @@ with DAG(
     tags=["silver", "etl"],
 ) as dag:
 
+    wait_for_bronze = ExternalTaskSensor(
+        task_id="wait_for_bronze",
+        external_dag_id="bronze_ingestion",
+        external_task_id="load_raw_data_to_bronze",
+        mode="poke",
+        poke_interval=60,
+    )
+
     clean_and_save_silver = BashOperator(
         task_id="clean_bronze_to_silver",
         bash_command=(
@@ -24,4 +33,4 @@ with DAG(
         ),
     )
 
-    clean_and_save_silver
+    wait_for_bronze >> clean_and_save_silver
