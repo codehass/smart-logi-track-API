@@ -1,12 +1,17 @@
-FROM python:3.11-slim
+FROM apache/airflow:2.8.1
 
-WORKDIR /code
+USER root
 
-COPY requirements.txt .
-RUN pip install -r requirements.txt
+# Install Java 
+RUN apt-get update \
+    && apt-get install -y openjdk-17-jdk \
+    && apt-get clean
 
-COPY ./app /code/app
+ENV JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
+ENV PATH=$JAVA_HOME/bin:$PATH
 
-EXPOSE 8000
+USER airflow
 
-CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000"]
+# Install Python dependencies
+COPY requirements.txt /requirements.txt
+RUN pip install --no-cache-dir -r /requirements.txt
