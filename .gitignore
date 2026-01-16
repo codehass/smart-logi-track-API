@@ -5,3 +5,7 @@ __pycache__/
 .DS_Store
 .idea/
 __pycache__/
+
+logs/
+airflow.db
+airflow.cfg
