@@ -15,3 +15,7 @@ USER airflow
 # Install Python dependencies
 COPY requirements.txt /requirements.txt
 RUN pip install --no-cache-dir -r /requirements.txt
+
+# Download PostgreSQL JDBC driver inside Airflow container
+RUN curl -L https://jdbc.postgresql.org/download/postgresql-42.6.0.jar \
+    -o /opt/airflow/postgresql-42.6.0.jar
