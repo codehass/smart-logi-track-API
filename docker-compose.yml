@@ -36,6 +36,8 @@ services:
     volumes:
       - ./dags:/opt/airflow/dags
       - ./logs:/opt/airflow/logs
+      - /home/hassan/Downloads:/opt/airflow/data
+      - ./spark_jobs:/opt/airflow/spark_jobs
       - ./requirements.txt:/requirements.txt
     command: >
       bash -c "
