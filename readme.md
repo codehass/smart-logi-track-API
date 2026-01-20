@@ -2,7 +2,6 @@
 
 <div align="center">
   <img src="public/logo-dark.png" alt="logo" width="140"  height="auto" />
-
   <br/>
 </div>
 
@@ -17,40 +16,40 @@
   - [Setup](#setup)
   - [Install](#install)
   - [Usage](#usage)
-  - [Login](#login)
 - [👥 Authors](#authors)
 - [🔭 Future Features](#future-features)
 - [🤝 Contributing](#contributing)
 - [⭐️ Show your support](#support)
 - [📝 License](#license)
 
-# 📖 Project title <a name="about-project"></a>
+# 📖 Smart LogiTrack – Urban Transport Predictive System (ETA) <a name="about-project"></a>
 
-Add a brief description of your project here
+Smart LogiTrack is an end-to-end Logistics "Control Tower" designed to predict Estimated Time of Arrival (ETA) for urban transport. This project implements a distributed data architecture that transitions raw taxi data through a Medallion pipeline (Bronze/Silver) to serve real-time machine learning predictions via a secured API.
 
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
 
   <ul>
-    <li><a href="https://nextjs.org/">Next.js</a></li>
-    <li><a href="https://www.tailwindcss.com/">Tailwind CSS</a></li>
-    <li><a href="https://styled-components.com/">Styled-components</a></li>
-    <li><a href="https://supabase.com/">Supabase</a></li>
+    <li><a href="https://spark.apache.org/docs/latest/api/python/index.html">PySpark (Distributed ETL)</a></li>
+    <li><a href="https://airflow.apache.org/">Apache Airflow (Orchestration)</a></li>
+    <li><a href="https://fastapi.tiangolo.com/">FastAPI (ML Serving)</a></li>
+    <li><a href="https://www.postgresql.org/">PostgreSQL (Data Warehouse)</a></li>
+    <li><a href="https://scikit-learn.org/">Scikit-Learn (ML Modeling)</a></li>
   </ul>
 
 ### Key Features <a name="key-features"></a>
 
-- **Feature one**
-- **Feature two**
-- **Feature three**
-- **Feature four**
+- **Distributed ETL Pipeline**: Automated high-volume data cleaning and feature engineering using PySpark.
+- **Medallion Architecture**: Structured data flow from raw ingestion (Bronze) to refined ML-ready features (Silver).
+- **Automated Orchestration**: End-to-end workflow management and task scheduling via Apache Airflow.
+- **Secure Prediction API**: High-performance FastAPI endpoints protected by JWT authentication for safe data access.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link](link to deployed project)
+- [Project API Documentation](https://github.com/codehass/smart-logitrack)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -63,7 +62,7 @@ To get a local copy up and running, follow these steps.
 Clone this repository to your desired folder:
 
 ```sh
-  git clone git@github.com:codehass/front-end-next-template.git
+  git clone git@github.com:codehass/smart-logitrack.git
 ```
 
 ### Install
@@ -103,11 +102,9 @@ To run the project, execute the following command:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- **Feature one**
-- **Feature two**
-- **Feature three**
-- **Feature four**
-
+- **Real-time Streaming**: Integration with Apache Kafka for live taxi data ingestion.
+- **Model Monitoring**: Dashboards to track model drift and accuracy over time.
+- **Deep Learning**: Implementation of LSTM or Transformer models for temporal traffic patterns.
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🤝 Contributing <a name="contributing"></a>
