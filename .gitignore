@@ -6,6 +6,6 @@ __pycache__/
 .idea/
 __pycache__/
 
-logs/
+/airflow/logs/
 airflow.db
 airflow.cfg
