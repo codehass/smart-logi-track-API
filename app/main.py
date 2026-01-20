@@ -5,8 +5,8 @@ from .api.routers import auth, predict
 from .config import settings
 
 app = FastAPI(
-    title="RetentionAI API",
-    description=("DEscription Project"),
+    title="Smart logi track API",
+    description=("Description Project"),
 )
 
 
