@@ -9,3 +9,7 @@ __pycache__/
 /airflow/logs/
 airflow.db
 airflow.cfg
+
+/data
+
+/ml/models
